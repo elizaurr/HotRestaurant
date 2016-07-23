@@ -21,7 +21,7 @@ var table = [
 
   {
     routeName: "elizaur",
-    CustomerName: "Elizaur Reyes",
+    customerName: "Elizaur Reyes",
     phoneNumber: "7326404475",
     customerEmail: "elizaurreyes@yahoo.com",
     customerID: 'eliID'   
@@ -29,7 +29,7 @@ var table = [
 
   {
     routeName: "Tom",
-    CustomerName: "Tom Jones",
+    customerName: "Tom Jones",
     phoneNumber: "7324567890",
     customerEmail: "TomJones@yahoo.com",
     customerID: 'eliID' 
@@ -37,7 +37,7 @@ var table = [
 
   {
     routeName: "Jane",
-    CustomerName: "Jane Doe",
+    customerName: "Jane Doe",
     phoneNumber: "7324445555",
     customerEmail: "JaneDoe@yahoo.com",
     customerID: 'JaneID'
@@ -52,7 +52,7 @@ var table = [
 
       var newTable = 
       {
-        CustomerName: $("#name").val().trim(),
+        customerName: $("#name").val().trim(),
         phoneNumber: $("#phone").val().trim(),
         customerEmail: $("#email").val().trim(),
         customerID: $("#ID").val().trim()
@@ -79,9 +79,9 @@ var table = [
             tableSection.addClass('well');
             tableSection.attr('id', 'tableWell-' + i)
             $('#wellSection').append(wellSection);
-            $("#tableWell-" + i).append("<h2>data: " + data[i].name + "</h2>");
-            $("#tableWell-" + i).append("<h3>phoneNumber: " + data[i].phoneNumber + "</h4>");
-            $("#tableWell-" + i).append("<h3>eMail: " + data[i].eMail + "</h4>");
-            $("#tableWell-" + i).append("<h3>uniqueID: " + data[i].uniqueID + "</h4>");
+            $("#tableWell-" + i).append("<h2>Data: " + data[i].customerName + "</h2>");
+            $("#tableWell-" + i).append("<h3>PhoneNumber: " + data[i].phoneNumber + "</h4>");
+            $("#tableWell-" + i).append("<h3>Email: " + data[i].customerEmail + "</h4>");
+            $("#tableWell-" + i).append("<h3>UniqueID: " + data[i].customerID + "</h4>");
         }
     })
