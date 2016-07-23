@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservation Page</title>
+   <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span>HOT RESTAURANT</h1>
+            <h2 class="text-center">Make Your Reservation</h2>
+            <br>
+            <div class="text-center">
+              <a href="/tables"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+               <a href="/tables"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span></button></a>
+       </div> 
+
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Resveration Page -->
+          <div class="panel panel-defaul">
+          <div class="panel-heading">
+            <h4 class="panel-title">Table Reservation</h4>
+          </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label for>Name</label>
+                <input type="text" name="form-control" id="reserve_name">
+                <div class="panel-body">
+              <div class="form-group">
+                <label for>Phone Number</label>
+                <input type="text" name="form-control" id="reserve_phone">
+              </div>
+              <div class="form-group">
+                <label for>Email</label>
+                <input type="text" name="form-control" id="reserve_email">
+              </div>
+              <div class="form-group">
+                <label for>Unique</label>
+                <input type="text" name="form-control" id="reserve_uniqueID">
+              </div>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </div>
+          </div>
+      </div>     
+</div>
+ <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="/api/tables">API Table Link</a>
+                | 
+                <a href="/api/waitlist">API Wait List</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
