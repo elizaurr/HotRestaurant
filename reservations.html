@@ -65,10 +65,10 @@
       {
         name: $("#reserve_name").val().trim(),
         phone: $("#reserve_phone").val().trim(),
-        email: $("#eserve_email").val().trim(),
+        email: $("#reserve_email").val().trim(),
         id: $("#reserve_uniqueID").val().trim()
       };
-      $.post( "http://localhost:3000/api/new", newRes)
+      $.post( "http://localhost:3000/api/tables", newRes)
         .done(function(data){
           console.log(data);
           alert("Adding Reservation...")
