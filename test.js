@@ -28,13 +28,13 @@
     $.get(currentURL + "/api", function(data) {
         for (var i = 0; i < data.length; i++) {
             var wellSection = $("<div>");
-            wellSection.addClass('well');
-            wellSection.attr('id', 'characterWell-' + i)
+            tableSection.addClass('well');
+            tableSection.attr('id', 'tableWell-' + i)
             $('#wellSection').append(wellSection);
-            $("#characterWell-" + i).append("<h2>" + data[i].name + "</h2>");
-            $("#characterWell-" + i).append("<h3>Role: " + data[i].role + "</h4>");
-            $("#characterWell-" + i).append("<h3>Age: " + data[i].age + "</h4>");
-            $("#characterWell-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
+            $("#tableWell-" + i).append("<h2>data: " + data[i].name + "</h2>");
+            $("#tableWell-" + i).append("<h3>phoneNumber: " + data[i].phoneNumber + "</h4>");
+            $("#tableWell-" + i).append("<h3>eMail: " + data[i].eMail + "</h4>");
+            $("#tableWell-" + i).append("<h3>uniqueID: " + data[i].uniqueID + "</h4>");
         }
     })
     
