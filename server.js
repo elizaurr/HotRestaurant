@@ -15,6 +15,35 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
+// Star Wars Characters (DATA)
+// =============================================================
+var table = [
+
+  {
+    routeName: "elizaur",
+    CustomerName: "Elizaur Reyes",
+    phoneNumber: "7326404475",
+    customerEmail: "elizaurreyes@yahoo.com",
+    customerID: 'eliID'   
+  },
+
+  {
+    routeName: "Tom",
+    CustomerName: "Tom Jones",
+    phoneNumber: "7324567890",
+    customerEmail: "TomJones@yahoo.com",
+    customerID: 'eliID' 
+  },
+
+  {
+    routeName: "Jane",
+    CustomerName: "Jane Doe",
+    phoneNumber: "7324445555",
+    customerEmail: "JaneDoe@yahoo.com",
+    customerID: 'JaneID'
+  }
+]
+
 
 
 // On the click the newTable data will be added
