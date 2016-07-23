@@ -17,7 +17,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 // Table Data (DATA)
 // =============================================================
-var table = [
+var tables = [
 
   {
     routeName: "elizaur",
@@ -94,16 +94,16 @@ app.get('/api/:tables?', function(req, res){
 })
 
 // Create New Tables - takes in JSON input
-app.post('/api/new', function(req, res){
+app.post('/api/tables', function(req, res){
 
   var newTables = req.body;
   newTables.routeName = newTables.name.replace(/\s+/g, '').toLowerCase()
 
-  console.log(newTable);
+  console.log(newTables);
 
   tables.push(newTables);
 
-  res.json(newTable);
+  res.json(newTables);
 })
 
 // Starts the server to begin listening 
