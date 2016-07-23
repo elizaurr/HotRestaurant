@@ -52,10 +52,10 @@ var table = [
 
       var newTable = 
       {
-        name: $("#name").val().trim(),
+        CustomerName: $("#name").val().trim(),
         phoneNumber: $("#phone").val().trim(),
-        eMail: $("#eMail").val().trim(),
-        uniqueID: $("#ID").val().trim()
+        customerEmail: $("#email").val().trim(),
+        customerID: $("#ID").val().trim()
       };
 
       // Question: What does this code do??
