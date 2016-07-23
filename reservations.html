@@ -68,7 +68,8 @@
         email: $("#reserve_email").val().trim(),
         id: $("#reserve_uniqueID").val().trim()
       };
-      $.post( "http://localhost:3000/tables", newRes)
+
+      $.post( "http://localhost:3000/api/tables", newRes)
         .done(function(data){
           console.log(data);
           alert("Adding Reservation...")

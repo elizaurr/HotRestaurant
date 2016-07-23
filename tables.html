@@ -28,26 +28,6 @@
               <h4 class="panel-title">Current Reservation</h4>
             </div>
             <div class="panel-body" id="tableSection">
-            <div class="well" id="tableWell-01">
-              <h2><span class="label label-primary">1 </span>" | eli"</h2>
-            
-            </div>
-            <div class="well" id="tableWell-11">
-              <h2><span class="label label-primary">2</span> " | dog"</h2>
-            
-            </div>
-            <div class="well" id="tableWell-21">
-              <h2><span class="label label-primary">3</span> " | f"</h2>
-            
-            </div>
-            <div class="well" id="tableWell-31">
-              <h2><span class="label label-primary">4</span> " | "</h2>
-            
-            </div>
-            <div class="well" id="tableWell-41">
-              <h2><span class="label label-primary">5</span> " | "</h2>
-            
-            </div>
           </div>
        </div>
       <div class="panel panel-default">
@@ -55,7 +35,6 @@
       </div>
       <div class="panel-body" id="waitlistSection">
         <div class="well" id="waitlistwell-01">
-          <h2><span class="label label-primary">1</span> "| 12"></h2>
         </div>
        </div>
     </div>
@@ -64,7 +43,6 @@
   <script type="text/javascript">
     
     // Code to push all data on the click
-
     var currentURL = window.location.origin;
     console.log(currentURL + "/api");
     $.get(currentURL + "/api", function(data) {
@@ -79,29 +57,6 @@
             $("#tableWell-" + i).append("<h3>UniqueID: " + data[i].customerID + "</h4>");
         }
     })
-
-    // On the click the newTable data will be added
-
-    $('#addBtn').on("click", function(){
-
-      var newTable = 
-      {
-        customerName: $("#name").val().trim(),
-        phoneNumber: $("#phone").val().trim(),
-        customerEmail: $("#email").val().trim(),
-        customerID: $("#ID").val().trim()
-      };
-
-      // Question: What does this code do??
-      $.post( "http://localhost:3000/api/new", newTable)
-        .done(function(data){
-          console.log(data);
-          alert("Adding table...")
-        })
-
-      return false;
-
-    }); 
 
   </script>
 
