@@ -15,7 +15,34 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
+// Star Wars Characters (DATA)
+// =============================================================
+var table = [
 
+  {
+    routeName: "elizaur",
+    customerName: "Elizaur Reyes",
+    phoneNumber: "7326404475",
+    customerEmail: "elizaurreyes@yahoo.com",
+    customerID: 'eliID'   
+  },
+
+  {
+    routeName: "Tom",
+    customerName: "Tom Jones",
+    phoneNumber: "7324567890",
+    customerEmail: "TomJones@yahoo.com",
+    customerID: 'eliID' 
+  },
+
+  {
+    routeName: "Jane",
+    customerName: "Jane Doe",
+    phoneNumber: "7324445555",
+    customerEmail: "JaneDoe@yahoo.com",
+    customerID: 'JaneID'
+  }
+]
 
 // On the click the newTable data will be added
 
@@ -23,10 +50,10 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
       var newTable = 
       {
-        name: $("#name").val().trim(),
+        customerName: $("#name").val().trim(),
         phoneNumber: $("#phone").val().trim(),
-        eMail: $("#eMail").val().trim(),
-        uniqueID: $("#ID").val().trim()
+        customerEmail: $("#email").val().trim(),
+        customerID: $("#ID").val().trim()
       };
 
       // Question: What does this code do??
@@ -40,6 +67,31 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
     }); 
 
+    // Routing Examples
+
+    // Basic route examples that sends the user first to the AJAX Page
+
+    app.get('/', function(req, res){
+      res.sendFile(path.join(__dirname, 'index.html'));
+    })
+
+    app.get('/add', function(req, res){
+      res.sendFile(path.join(__dirname, 'tables.html'));
+    })
+
+    app.get('/all', function(req, res){
+      res.sendFile(path.join(__dirname, 'reservations.html'));
+    })
+
+     app.get('/add', function(req, res){
+      res.sendFile(path.join(__dirname, 'add.html'));
+    })
+
+    app.get('/all', function(req, res){
+      res.sendFile(path.join(__dirname, 'all.html'));
+    })
+
+
     // Code to push all data on the click
 
      var currentURL = window.location.origin;
@@ -50,9 +102,9 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
             tableSection.addClass('well');
             tableSection.attr('id', 'tableWell-' + i)
             $('#wellSection').append(wellSection);
-            $("#tableWell-" + i).append("<h2>data: " + data[i].name + "</h2>");
-            $("#tableWell-" + i).append("<h3>phoneNumber: " + data[i].phoneNumber + "</h4>");
-            $("#tableWell-" + i).append("<h3>eMail: " + data[i].eMail + "</h4>");
-            $("#tableWell-" + i).append("<h3>uniqueID: " + data[i].uniqueID + "</h4>");
+            $("#tableWell-" + i).append("<h2>Data: " + data[i].customerName + "</h2>");
+            $("#tableWell-" + i).append("<h3>PhoneNumber: " + data[i].phoneNumber + "</h4>");
+            $("#tableWell-" + i).append("<h3>Email: " + data[i].customerEmail + "</h4>");
+            $("#tableWell-" + i).append("<h3>UniqueID: " + data[i].customerID + "</h4>");
         }
     })

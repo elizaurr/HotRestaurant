@@ -10,7 +10,7 @@
     "Class",
     "work"
   ],
-  "author": "",
+  "author": "Todd, Eli, Steven, Mike",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
