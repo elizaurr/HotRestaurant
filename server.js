@@ -52,12 +52,21 @@ var table = [
       res.sendFile(path.join(__dirname, 'index.html'));
     })
 
+<<<<<<< HEAD
     app.get('/add', function(req, res){
       res.sendFile(path.join(__dirname, 'table.html'));
     })
 
     app.get('/resv', function(req, res){
       res.sendFile(path.join(__dirname, 'Resv.html'));
+=======
+    app.get('/tables', function(req, res){
+      res.sendFile(path.join(__dirname, 'tables.html'));
+    })
+
+    app.get('/reservations', function(req, res){
+      res.sendFile(path.join(__dirname, 'reservations.html'));
+>>>>>>> 7097132415ec60e1653f2662242ab86686c652a5
     })
 
      app.get('/add', function(req, res){
