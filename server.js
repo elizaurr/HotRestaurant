@@ -52,11 +52,11 @@ var table = [
       res.sendFile(path.join(__dirname, 'index.html'));
     })
 
-    app.get('/add', function(req, res){
+    app.get('/tables', function(req, res){
       res.sendFile(path.join(__dirname, 'tables.html'));
     })
 
-    app.get('/all', function(req, res){
+    app.get('/reservations', function(req, res){
       res.sendFile(path.join(__dirname, 'reservations.html'));
     })
 
