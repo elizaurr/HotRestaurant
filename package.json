@@ -1,0 +1,19 @@
+{
+  "name": "hotrestaurant",
+  "version": "1.0.0",
+  "description": "Restaurant App ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Class",
+    "work"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
