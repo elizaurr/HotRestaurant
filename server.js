@@ -44,33 +44,10 @@ var table = [
   }
 ]
 
-// On the click the newTable data will be added
-
-    $('#addBtn').on("click", function(){
-
-      var newTable = 
-      {
-        customerName: $("#name").val().trim(),
-        phoneNumber: $("#phone").val().trim(),
-        customerEmail: $("#email").val().trim(),
-        customerID: $("#ID").val().trim()
-      };
-
-      // Question: What does this code do??
-      $.post( "http://localhost:3000/api/new", newTable)
-        .done(function(data){
-          console.log(data);
-          alert("Adding character...")
-        })
-
-      return false;
-
-    }); 
-
     // Routing Examples
 
     // Basic route examples that sends the user first to the AJAX Page
-
+    
     app.get('/', function(req, res){
       res.sendFile(path.join(__dirname, 'index.html'));
     })
@@ -89,22 +66,4 @@ var table = [
 
     app.get('/all', function(req, res){
       res.sendFile(path.join(__dirname, 'all.html'));
-    })
-
-
-    // Code to push all data on the click
-
-     var currentURL = window.location.origin;
-    console.log(currentURL + "/api");
-    $.get(currentURL + "/api", function(data) {
-        for (var i = 0; i < data.length; i++) {
-            var wellSection = $("<div>");
-            tableSection.addClass('well');
-            tableSection.attr('id', 'tableWell-' + i)
-            $('#wellSection').append(wellSection);
-            $("#tableWell-" + i).append("<h2>Data: " + data[i].customerName + "</h2>");
-            $("#tableWell-" + i).append("<h3>PhoneNumber: " + data[i].phoneNumber + "</h4>");
-            $("#tableWell-" + i).append("<h3>Email: " + data[i].customerEmail + "</h4>");
-            $("#tableWell-" + i).append("<h3>UniqueID: " + data[i].customerID + "</h4>");
-        }
     })
