@@ -69,17 +69,17 @@
     console.log(currentURL + "/api");
     $.get(currentURL + "/api", function(data) {
         for (var i = 0; i < data.length; i++) {
-            var wellSection = $("<div>");
+            var tableSection = $("<div>");
             tableSection.addClass('well');
             tableSection.attr('id', 'tableWell-' + i)
-            $('#wellSection').append(wellSection);
+            $('#tableSection').append(tableSection);
             $("#tableWell-" + i).append("<h2>Data: " + data[i].customerName + "</h2>");
             $("#tableWell-" + i).append("<h3>PhoneNumber: " + data[i].phoneNumber + "</h4>");
             $("#tableWell-" + i).append("<h3>Email: " + data[i].customerEmail + "</h4>");
             $("#tableWell-" + i).append("<h3>UniqueID: " + data[i].customerID + "</h4>");
         }
     })
-    
+
     // On the click the newTable data will be added
 
     $('#addBtn').on("click", function(){
