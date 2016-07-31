@@ -48,7 +48,7 @@
     $.get(currentURL + "/api", function(data) {
         for (var i = 0; i < data.length; i++) {
             var tableSection = $("<div>");
-            tableSection.addClass('well');
+            tableSection.addClass('table');
             tableSection.attr('id', 'tableWell-' + i)
             $('#tableSection').append(tableSection);
             $("#tableWell-" + i).append("<h2>Data: " + data[i].customerName + "</h2>");
@@ -71,3 +71,4 @@
     </footer>
 </body>
 </html>
+
